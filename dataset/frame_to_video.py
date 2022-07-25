@@ -28,6 +28,20 @@ demain faire un fichier string comme coco """
 # ( img_w, img_h) = img.size
 
 target_dir="C:/Users/MediaHelp/detr_application_wider_face/testvideogeneration/mimi"
+'''
+for j =1: 4
+    Directory = uigetdir('\content\gdrive\MyDrive\Colab Notebooks\first trial\basics_for_infrared_detection\dataset\LSOTB-TIR_TrainingData\TrainingData\' ,'Select Input-folder');
+    G = dir(Directory);  %dir for folder type string
+    G = G([G.isdir]); 
+    G = G(~ismember({G.name}, {'.' '..'}));          % out: G.name :string
+    G(strncmp({G.name}, '.',1)) = [];  % Remove . and ..
+    for k = 1:length(G)
+        target_dir = fullfile(Directory, G(k).name);
+
+    end
+end   
+'''
+    
 #target_dir= "C:/Users/MediaHelp/detr_application_wider_face/Nouveau dossier/mimi"
 
 import cv2
