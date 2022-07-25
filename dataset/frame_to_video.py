@@ -8,7 +8,7 @@ img = Image.open("00000001.jpg")
 # WIDTH and HEIGHT are integers
 ( img_w, img_h) = img.size
  
-# choose codec according to format needed
+# choose codec according to  needed format
 fourcc = cv2.VideoWriter_fourcc(*'mp4v') 
 video = cv2.VideoWriter('video.avi', fourcc, 1, (img_w, img_h))
 
