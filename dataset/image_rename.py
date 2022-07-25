@@ -24,12 +24,12 @@ from glob import glob
 import string
 
 #for j =1: 4
-     #Directory = uigetdir('\content\gdrive\MyDrive\Colab Notebooks\first trial\basics_for_infrared_detection\dataset\LSOTB-TIR_TrainingData\Annotations\TrainingData\' ,'Select Input-Directory');
-Directory=os.getcwd()
+     #Directory_image = uigetdir('\content\gdrive\MyDrive\Colab Notebooks\first trial\basics_for_infrared_detection\dataset\LSOTB-TIR_TrainingData\TrainingData\' ,'Select Input-Directory');
+Directory_image=os.getcwd()
 
    #folder ="C:/Users/MediaHelp/detr_application_wider_face/Nouveau dossier/mimi"
 
-for i, folder in enumerate(os.listdir(Directory)):
+for i, folder in enumerate(os.listdir(Directory_image)):
     
       for count, filename in enumerate(glob(f'{folder}/*.jpg')):
             #dst = f"part_{5}_train_{1}_{folder}_({filename}.split('\\')[-1])"
