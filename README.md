@@ -18,7 +18,7 @@ Usage:
                    effectiveexercice_manyevent_sequence_only_one_script_test.m
 
     event_listsequence =                                                                                    'TIR_training_001/airplane_002'
-    face_bbx_list_sequence (x1, y1, w, h/ xmin, ymin, xmax, ymax)=            '115'   '172'	'220'	'226'
+    lsotb_bbx_list_sequence (x1, y1, w, h/ xmin, ymin, xmax, ymax)=            '115'   '172'	'220'	'226'
     file_listsequence:                                                                                           '00000001'   ---  'part_{}_train_{}_{}_%d'
     occlusion_label_list_sequence =                                                                0
     track_label_list_sequence=            
@@ -26,7 +26,7 @@ Usage:
 
     Mat_all_part5.event_list{j,1} = event_list_train1_part5;
     Mat_all_part5.file_list{j,1} = file_list_train1_part5;
-    Mat_all_part5.bbx_list{j,1} = face_bbx_list_train1_part5;
+    Mat_all_part5.bbx_list{j,1} = lsotb_bbx_list_train1_part5;
     Mat_all_part5.occlusion_label_list{j,1}= occlusion_label_list_train1_part5;
     Mat_all_part5.track_label_list{j,1} = track_label_list_sequence;                                                             1
 
@@ -58,9 +58,9 @@ python3  main.py    --dataset_file  lotsb    --data_path    ../dataset/
 python3  main.py    --dataset_file  lotsb    --data_path  ../dataset/ 
  --output_dir  output  --resume    weights/detr-r50-e632da11.pth 
 
-8- Evaluation/visualization  #--data_path =  ../dataset/WIDER_val/images/          pretrained weights= output/checkpoint.pth 
+8- Evaluation/visualization  #--data_path =  ../dataset/LSOTB_val/images/          pretrained weights= output/checkpoint.pth 
 
-     python3  test.py    --dataset_file  lotsb    --data_path    ../dataset/WIDER_val/images/   --output_dir  output    --resume    output/checkpoint.pth 
+     python3  test.py    --dataset_file  lotsb    --data_path    ../dataset/LSOTB_val/images/   --output_dir  output    --resume    output/checkpoint.pth 
 
 
 
