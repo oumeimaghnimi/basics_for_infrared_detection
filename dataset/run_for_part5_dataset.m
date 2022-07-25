@@ -38,7 +38,7 @@ for j =1: 4
         %  movefile('H:\video to apply SSL\LSOTB-TIR_TrainingData\Annotations\TIR_training_003\Drone_boat_001\00000001test.xml','H:\video to apply SSL\LSOTB-TIR_TrainingData\Annotations\TIR_training_003\Drone_boat_001\00000001.xml'); 
         event_listsequence = {}; 
         file_listsequence = {};
-        face_bbx_list_sequence = {};
+        lsotb_bbx_list_sequence = {};
         occlusion_label_list_sequence = {};
         track_label_list_sequence = {};
       %select all by click 
@@ -140,11 +140,11 @@ for j =1: 4
        
            %movefile( sprintf('file_listsequence{i, 1}'), sprintf('part_5_train_%s_G_ann(k).name_file_listsequence{i, 1}', 'j'));
     
-                     %%bndbox to face_bbx_list
+                     %%bndbox to lsotb_bbx_list
 
-            face_bbx_list_sequence{i, 1}={mlStruct.Children(5).Children(4).Children(1).Children.Data,    mlStruct.Children(5).Children(4).Children(2).Children.Data,   mlStruct.Children(5).Children(4).Children(3).Children.Data,    mlStruct.Children(5).Children(4).Children(4).Children.Data};
+            lsotb_bbx_list_sequence{i, 1}={mlStruct.Children(5).Children(4).Children(1).Children.Data,    mlStruct.Children(5).Children(4).Children(2).Children.Data,   mlStruct.Children(5).Children(4).Children(3).Children.Data,    mlStruct.Children(5).Children(4).Children(4).Children.Data};
             %to make it in form of x,y, w,h
-            %face_bbx_list_sequence{i,1}={
+            %lsotb_bbx_list_sequence{i,1}={
 %(str2num(mlStruct.Children(5).Children(4).Children(1).Children.Data) + (str2num(mlStruct.Children(5).Children(4).Children(3).Children.Data) -  str2num(mlStruct.Children(5).Children(4).Children(1).Children.Data))/2) , 
 %(str2num(mlStruct.Children(5).Children(4).Children(2).Children.Data) + (str2num(mlStruct.Children(5).Children(4).Children(4).Children.Data) - str2num(mlStruct.Children(5).Children(4).Children(2).Children.Data))/2), 
 %(str2num(mlStruct.Children(5).Children(4).Children(3).Children.Data) -  str2num(mlStruct.Children(5).Children(4).Children(1).Children.Data)) ,
@@ -160,7 +160,7 @@ for j =1: 4
         %rmdir mycurrentfiles
     
         file_list_train1_part5{k,1} = file_listsequence;  
-        face_bbx_list_train1_part5{k,1} = face_bbx_list_sequence; 
+        lsotb_bbx_list_train1_part5{k,1} = lsotb_bbx_list_sequence; 
         occlusion_label_list_train1_part5{k,1} = occlusion_label_list_sequence;
         track_label_list__train1_part5{k,1} = track_label_list_sequence;
         event_list_train1_part5{k,1} = event_listsequence{1,1};  %%%%%
@@ -169,7 +169,7 @@ for j =1: 4
     
     Mat_all_part5.event_list{j,1} = event_list_train1_part5;
     Mat_all_part5.file_list{j,1} = file_list_train1_part5;
-    Mat_all_part5.bbx_list{j,1} = face_bbx_list_train1_part5;
+    Mat_all_part5.bbx_list{j,1} = lsotb_bbx_list_train1_part5;
     Mat_all_part5.occlusion_label_list{j,1}= occlusion_label_list_train1_part5;
     Mat_all_part5.track_label_list{j,1} = track_label_list_sequence;
 
