@@ -30,13 +30,13 @@ demain faire un fichier string comme coco """
 target_dir="C:/Users/MediaHelp/detr_application_wider_face/testvideogeneration/mimi"
 '''
 for j =1: 4
-    Directory = uigetdir('\content\gdrive\MyDrive\Colab Notebooks\first trial\basics_for_infrared_detection\dataset\LSOTB-TIR_TrainingData\TrainingData\' ,'Select Input-folder');
-    G = dir(Directory);  %dir for folder type string
-    G = G([G.isdir]); 
-    G = G(~ismember({G.name}, {'.' '..'}));          % out: G.name :string
-    G(strncmp({G.name}, '.',1)) = [];  % Remove . and ..
-    for k = 1:length(G)
-        target_dir = fullfile(Directory, G(k).name);
+    Directory_image = uigetdir('\content\gdrive\MyDrive\Colab Notebooks\first trial\basics_for_infrared_detection\dataset\LSOTB-TIR_TrainingData\TrainingData\' ,'Select Input-folder');
+    G_img = dir(Directory_image);  %dir for folder type string
+    G_img = G_img([G_img.isdir]); 
+    G_img = G_img(~ismember({G_img.name}, {'.' '..'}));          % out: G.name :string
+    G_img(strncmp({G_img.name}, '.',1)) = [];  % Remove . and ..
+    for k = 1:length(G_img)
+        target_dir = fullfile(Directory_image, G_img(k).name);
 
     end
 end   
