@@ -24,7 +24,6 @@ phases = ["train", "val"]
 for phase in phases:
     #root_path = "WIDER_{}/images/".format(phase)
      ##/content/gdrive/MyDrive/Colab Notebooks/first trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData/TrainingData/
-        ##/content/gdrive/MyDrive/Colab Notebooks/first trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData/TrainingData/images/
     root_path ="LSOTB_TIR_{}/images/".format(phase)
     #gt_path = os.path.join("wider_face_split/wider_face_{}.mat".format(phase))
     ##/content/gdrive/MyDrive/Colab Notebooks/first trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData/Annotations/Mat_all_part5.mat
