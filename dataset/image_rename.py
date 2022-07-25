@@ -22,6 +22,9 @@ import os
 import glob
 from glob import glob
 import string
+
+#for j =1: 4
+     #Directory = uigetdir('\content\gdrive\MyDrive\Colab Notebooks\first trial\basics_for_infrared_detection\dataset\LSOTB-TIR_TrainingData\Annotations\TrainingData\' ,'Select Input-Directory');
 Directory=os.getcwd()
 
    #folder ="C:/Users/MediaHelp/detr_application_wider_face/Nouveau dossier/mimi"
@@ -42,6 +45,8 @@ for i, folder in enumerate(os.listdir(Directory)):
             os.rename(  filename, dst )
 
             #filename.split('.')[-2]
+            
+  #end
 
 
             
