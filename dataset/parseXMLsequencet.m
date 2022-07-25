@@ -162,14 +162,14 @@ end
 % LSOTB_part5_TIRDataset
 % sprintf('LSOTB_{%s}', 'part1')
 
-              %%bndbox to face_bbx_list
-% face_bbx_list_test{1, 1}={mlStruct.Children(5).Children(4).Children(1).Children.Data,    mlStruct.Children(5).Children(4).Children(2).Children.Data,   mlStruct.Children(5).Children(4).Children(3).Children.Data,    mlStruct.Children(5).Children(4).Children(4).Children.Data}
+              %%bndbox to lsotb_bbx_list
+% lsotb_bbx_list_test{1, 1}={mlStruct.Children(5).Children(4).Children(1).Children.Data,    mlStruct.Children(5).Children(4).Children(2).Children.Data,   mlStruct.Children(5).Children(4).Children(3).Children.Data,    mlStruct.Children(5).Children(4).Children(4).Children.Data}
 %pour retourner  la ligne in a cell {; ; ;}
-% list  of an  airplane event for example : face_bbx_list{1, 1}  
-% face_bbx_list{1, 1}{1, 1}: first image from the first event
-% face_bbx_list{1, 1}{2, 1}: second image from the first event
-% face_bbx_list_unique_image{1, 1}={mlStruct.Children(5).Children(4).Children(1).Children.Data,    mlStruct.Children(5).Children(4).Children(2).Children.Data,   mlStruct.Children(5).Children(4).Children(3).Children.Data,    mlStruct.Children(5).Children(4).Children(4).Children.Data}
-% face_bbx_list_unique_image{2, 1}={mlStruct.Children(5).Children(4).Children(1).Children.Data,    mlStruct.Children(5).Children(4).Children(2).Children.Data,   mlStruct.Children(5).Children(4).Children(3).Children.Data,    mlStruct.Children(5).Children(4).Children(4).Children.Data}
+% list  of an  airplane event for example : lsotb_bbx_list{1, 1}  
+% lsotb_bbx_list{1, 1}{1, 1}: first image from the first event
+% lsotb_bbx_list{1, 1}{2, 1}: second image from the first event
+% lsotb_bbx_list_unique_image{1, 1}={mlStruct.Children(5).Children(4).Children(1).Children.Data,    mlStruct.Children(5).Children(4).Children(2).Children.Data,   mlStruct.Children(5).Children(4).Children(3).Children.Data,    mlStruct.Children(5).Children(4).Children(4).Children.Data}
+% lsotb_bbx_list_unique_image{2, 1}={mlStruct.Children(5).Children(4).Children(1).Children.Data,    mlStruct.Children(5).Children(4).Children(2).Children.Data,   mlStruct.Children(5).Children(4).Children(3).Children.Data,    mlStruct.Children(5).Children(4).Children(4).Children.Data}
 % for unique image, we can find multiple bbox
 
 
