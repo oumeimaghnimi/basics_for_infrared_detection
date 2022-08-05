@@ -27,10 +27,11 @@ demain faire un fichier string comme coco """
 # WIDTH and HEIGHT are integers
 # ( img_w, img_h) = img.size
 
-target_dir="C:/Users/MediaHelp/detr_application_wider_face/testvideogeneration/mimi"
+# target_dir="C:/Users/MediaHelp/detr_application_wider_face/testvideogeneration/mimi"
 '''
 for j =1: 4
     Directory_image = uigetdir('\content\gdrive\MyDrive\Colab Notebooks\first trial\basics_for_infrared_detection\dataset\LSOTB-TIR_TrainingData\TrainingData\' ,'Select Input-folder');
+    "/content/gdrive/My Drive/Colab Notebooks/first trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004_extracted/TIR_training_004/"
     G_img = dir(Directory_image);  %dir for folder type string
     G_img = G_img([G_img.isdir]); 
     G_img = G_img(~ismember({G_img.name}, {'.' '..'}));          % out: G.name :string
@@ -41,13 +42,8 @@ for j =1: 4
     end
 end   
 '''
-    
-#target_dir= "C:/Users/MediaHelp/detr_application_wider_face/Nouveau dossier/mimi"
 
-import cv2
-import numpy as np
-import glob
-import PIL.Image as Image
+'''
 img_array=[]
 for filename in glob.glob(f'{target_dir}/*.jpg'):
     img = Image.open(filename)
@@ -60,5 +56,40 @@ out=cv2.VideoWriter('project.avi', cv2.VideoWriter_fourcc(*'DIVX'), 15, size)
 for i in range(len(img_array)):
     out.write(img_array[i])
 out.release()
+
+'''
+
+   
+
+
+
+#target_dir= "C:/Users/MediaHelp/detr_application_wider_face/Nouveau dossier/mimi"
+
+import cv2
+import numpy as np
+import glob
+import PIL.Image as Image
+
+ Directory_image = "/content/gdrive/My Drive/Colab Notebooks/first trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004_extracted/TIR_training_004/"
+ G_img = dir(Directory_image);  %dir for folder type string
+ G_img = G_img([G_img.isdir]); 
+ G_img = G_img(~ismember({G_img.name}, {'.' '..'}));          % out: G.name :string
+ G_img(strncmp({G_img.name}, '.',1)) = [];  % Remove . and ..
+  for k = 1:length(G_img)
+      target_dir = fullfile(Directory_image, G_img(k).name);
+      img_array=[]
+      for filename in glob.glob(f'{target_dir}/*.jpg'):
+          img = Image.open(filename)
+          (width, height)=img.size
+          size=(width, height)
+          imgcv=cv2.imread(filename)
+         #img.shape
+         img_array.append(imgcv)
+      out=cv2.VideoWriter('project.avi', cv2.VideoWriter_fourcc(*'DIVX'), 15, size)
+      for i in range(len(img_array)):
+          out.write(img_array[i])
+      out.release()
+
+  end
 
 
