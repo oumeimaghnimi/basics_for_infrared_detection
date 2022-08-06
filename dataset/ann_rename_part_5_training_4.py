@@ -28,5 +28,5 @@ for i, folder in enumerate(os.listdir(Directory_image)):
 '''
  cwd = os.getcwd()
  print(cwd)
- os.listdir(Directory_image + '/truck_006/')
+os.listdir(Directory_image + '/airplane_001/')
  '''
