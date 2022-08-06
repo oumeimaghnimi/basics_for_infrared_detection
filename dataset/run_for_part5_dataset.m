@@ -21,6 +21,7 @@
 
     G_ann= rmfield(G_ann,{'date','bytes', 'isdir', 'datenum'}); %G_ann  Matlab  struct of string
 % G_ann=Airplaine_002, bear_001, etc
+  % in python:   G_ann =  os.listdir(folder_ann)
     for k = 1:length(G_ann)
         f_ann = fullfile(folder_ann, G_ann(k).name); %subfolder_ann=f_ann    %f_ann string path to airplane for instance
         F_ann = dir(sprintf('%s/*.xml', f_ann));
