@@ -1,6 +1,6 @@
 
     folder_ann = '/content/gdrive/MyDrive/Colab Notebooks/first trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/'
-    G_ann = dir(folder_ann);  %G_ann: string
+    G_ann = dir(folder_ann);  
     G_ann = G([G.isdir]); 
     G_ann = G_ann(~ismember({G_ann.name}, {'.' '..'}));              
     G_ann(strncmp({G_ann.name}, '.',1)) = [];  
@@ -8,7 +8,6 @@
     
     
     for k = 1:length(G_ann)
-        %subfolder_ann = uigetdir('folder_ann','Select Input-subfolder-annotations'); 
         f_ann = fullfile(folder_ann, G_ann(k).name); 
         F_ann = dir(sprintf('%s/*.xml', f_ann));   
         for h = 1:length(F_ann)
