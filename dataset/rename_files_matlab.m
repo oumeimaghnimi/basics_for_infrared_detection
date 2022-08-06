@@ -1,7 +1,7 @@
 
     folder_ann = '/content/gdrive/MyDrive/Colab Notebooks/first trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/'
     G_ann = dir(folder_ann);  
-    G_ann = G([G.isdir]); 
+    G_ann = G([G_ann.isdir]); 
     G_ann = G_ann(~ismember({G_ann.name}, {'.' '..'}));              
     G_ann(strncmp({G_ann.name}, '.',1)) = [];  
     G_ann= rmfield(G_ann,{'date','bytes', 'isdir', 'datenum'}); 
