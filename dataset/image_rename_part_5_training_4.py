@@ -22,6 +22,14 @@ for i, folder in enumerate(os.listdir(Directory_image)):
         filename = f"{Directory_image}/{filename}"
             #dst= glob(f"{Directory}/{folder }/{dst}")
         os.rename(filename, dst)
+     
+     
+ # verification
+'''
+ cwd = os.getcwd()
+ print(cwd)
+ os.listdir(Directory_image + '/truck_006/')
+ '''
 
            
             
