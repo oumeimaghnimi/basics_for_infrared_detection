@@ -23,11 +23,14 @@
 % G_ann=Airplaine_002, bear_001, etc
   % in python:   G_ann =  os.listdir(folder_ann)
   
+   event_list_train1_part5 = {}; 
    file_list_train1_part5 = {};  
    lsotb_bbx_list_train1_part5 = {}; 
    occlusion_label_list_train1_part5 = {}; 
    track_label_list__train1_part5 = {}; 
-   event_list_train1_part5 = {}; 
+   
+   
+   
    Mat_part5_train4.event_list = event_list_train1_part5 = {};
    Mat_part5_train4.file_list= file_list_train1_part5 = {};
    Mat_part5_train4.bbx_list = lsotb_bbx_list_train1_part5 = {};
@@ -100,10 +103,10 @@
             mlStruct.Children(2).Children = rmfield(mlStruct.Children(2).Children,'Data');
             %inside the xml, labeling is not done
            
-            disp(sprintf('part_5_train_%d_%s_%s', 1, G_ann(k).name, mlStruct.Children(2).Children.file_list));
+            disp(sprintf('part_5_train_%d_%s_%s', 4, G_ann(k).name, mlStruct.Children(2).Children.file_list));
             event_listsequence{i, 1} = mlStruct.Children(1).Children.event_list; 
               
-           file_listsequence{i, 1} = sprintf('part_5_train_%d_%s_%s', 1, G_ann(k).name, mlStruct.Children(2).Children.file_list);
+           file_listsequence{i, 1} = sprintf('part_5_train_%d_%s_%s', 4, G_ann(k).name, mlStruct.Children(2).Children.file_list);
 
 
             lsotb_bbx_list_sequence{i, 1}={mlStruct.Children(5).Children(4).Children(1).Children.Data,    mlStruct.Children(5).Children(4).Children(2).Children.Data,   mlStruct.Children(5).Children(4).Children(3).Children.Data,    mlStruct.Children(5).Children(4).Children(4).Children.Data};
