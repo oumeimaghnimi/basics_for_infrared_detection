@@ -2,7 +2,7 @@
 %first step: add all folders and subfolders and scripts to path by double
 %clic and choose add to path
 
-#for j =1: 4
+%for j =1: 4
     %folder_ann = uigetdir('H:\video_to_apply_SSL\LSOTB-TIR_TrainingData\test_sur_four_lstob\','Select Input-folder-annotations'); 
     %folder_ann = uigetdir('D:\Matlab C\TLBO\test_sur_four_lstob' ,'Select Input-folder-annotations');
     %folder_ann = uigetdir('\content\gdrive\MyDrive\Colab Notebooks\first trial\basics_for_infrared_detection\dataset\LSOTB-TIR_TrainingData\Annotations\' ,'Select Input-folder');
@@ -111,19 +111,15 @@
 
     end
     
-    %Mat_part5_train_4.event_list{1,1} = event_list_train1_part5;
-    %Mat_part5_train_4.file_list{1,1} = file_list_train1_part5;
-    %Mat_part5_train_4.bbx_list{1,1} = lsotb_bbx_list_train1_part5;
-    %Mat_part5_train_4.occlusion_label_list{1,1}= occlusion_label_list_train1_part5;
-    %Mat_part5_train_4.track_label_list{1,1} = track_label_list_sequence;
+    Mat_part5_train_4.event_list{1,1} = event_list_train1_part5;
+    Mat_part5_train_4.file_list{1,1} = file_list_train1_part5;
+    Mat_part5_train_4.bbx_list{1,1} = lsotb_bbx_list_train1_part5;
+    Mat_part5_train_4.occlusion_label_list{1,1}= occlusion_label_list_train1_part5;
+    Mat_part5_train_4.track_label_list{1,1} = track_label_list_sequence;
     
     
     
-    Mat_part5_train_4.event_list= event_list_train1_part5;
-    Mat_part5_train_4.file_list = file_list_train1_part5;
-    Mat_part5_train_4.bbx_list = lsotb_bbx_list_train1_part5;
-    Mat_part5_train_4.occlusion_label_list= occlusion_label_list_train1_part5;
-    Mat_part5_train_4.track_label_list = track_label_list_sequence;
+
 
 
 %end
