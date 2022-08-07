@@ -111,11 +111,11 @@
 
     end
     
-    Mat_part5_train_4.event_list{1,1} = event_list_train1_part5;
-    Mat_part5_train_4.file_list{1,1} = file_list_train1_part5;
-    Mat_part5_train_4.bbx_list{1,1} = lsotb_bbx_list_train1_part5;
-    Mat_part5_train_4.occlusion_label_list{1,1}= occlusion_label_list_train1_part5;
-    Mat_part5_train_4.track_label_list{1,1} = track_label_list_sequence;
+    Mat_part5_train4.event_list{1,1} = event_list_train1_part5;
+    Mat_part5_train4.file_list{1,1} = file_list_train1_part5;
+    Mat_part5_train4.bbx_list{1,1} = lsotb_bbx_list_train1_part5;
+    Mat_part5_train4.occlusion_label_list{1,1}= occlusion_label_list_train1_part5;
+    Mat_part5_train4.track_label_list{1,1} = track_label_list_sequence;
     
     
     
@@ -133,4 +133,4 @@
 % Mat_LSTOB.track_label_list = Mat_all_part5.track_label_list;
 
 %matlab.io.saveVariablesToScript('Save_LSOTB_annotation.m', {'Mat_all_part5','Mat_LSTOB'} )
-matlab.io.saveVariablesToScript('Save_LSOTB_annotation_part_5_training_4.m', {'Mat_part5_train_4'} )
+matlab.io.saveVariablesToScript('Save_LSOTB_annotation_part_5_train4.m', {'Mat_part5_train4'} )
