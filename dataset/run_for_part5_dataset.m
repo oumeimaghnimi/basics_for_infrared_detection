@@ -107,7 +107,7 @@
         lsotb_bbx_list_train1_part5{k,1} = lsotb_bbx_list_sequence; 
         occlusion_label_list_train1_part5{k,1} = occlusion_label_list_sequence;
         track_label_list__train1_part5{k,1} = track_label_list_sequence;
-        event_list_train1_part5{k,1} = event_listsequence{1,1};  %%%%%
+        event_list_train1_part5{k,1} = event_listsequence{1,1}; 
 
     end
     
