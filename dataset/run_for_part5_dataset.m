@@ -111,11 +111,19 @@
 
     end
     
-    Mat_part5_train_4.event_list{1,1} = event_list_train1_part5;
-    Mat_part5_train_4.file_list{1,1} = file_list_train1_part5;
-    Mat_part5_train_4.bbx_list{1,1} = lsotb_bbx_list_train1_part5;
-    Mat_part5_train_4.occlusion_label_list{1,1}= occlusion_label_list_train1_part5;
-    Mat_part5_train_4.track_label_list{1,1} = track_label_list_sequence;
+    %Mat_part5_train_4.event_list{1,1} = event_list_train1_part5;
+    %Mat_part5_train_4.file_list{1,1} = file_list_train1_part5;
+    %Mat_part5_train_4.bbx_list{1,1} = lsotb_bbx_list_train1_part5;
+    %Mat_part5_train_4.occlusion_label_list{1,1}= occlusion_label_list_train1_part5;
+    %Mat_part5_train_4.track_label_list{1,1} = track_label_list_sequence;
+    
+    
+    
+    Mat_part5_train_4.event_list= event_list_train1_part5;
+    Mat_part5_train_4.file_list = file_list_train1_part5;
+    Mat_part5_train_4.bbx_list = lsotb_bbx_list_train1_part5;
+    Mat_part5_train_4.occlusion_label_list= occlusion_label_list_train1_part5;
+    Mat_part5_train_4.track_label_list = track_label_list_sequence;
 
 
 %end
