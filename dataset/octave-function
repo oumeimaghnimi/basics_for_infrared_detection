@@ -1,5 +1,0 @@
-function retval = name_of_script(parametres) 
-
-%your script
-
-endfunction
