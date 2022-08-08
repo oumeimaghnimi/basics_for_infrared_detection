@@ -1,4 +1,4 @@
-function [Mat_part5_train4.mat] = Get_mat_function(cwd)
+function [Mat_part5_train4] = Get_mat_function(cwd)
 %first step: add all folders and subfolders and scripts to path by double
 %clic and choose add to path
 
