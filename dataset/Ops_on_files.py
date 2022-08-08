@@ -33,4 +33,22 @@ for file_name in os.listdir(source_folder):
     if os.path.isfile(source):
        shutil.move(source, destination)
        print('Moved:', file_name)
+        
+# add_paths on octave 
+from os import listdir
+G_img=listdir('/content/gdrive/MyDrive/Colab Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann') 
+count = 0
+while count <len(G_img)-2 :
+      G_img[count] = '/gdrive/MyDrive/Colab Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/' + G_img[count]
+      count += 1
+    
+#import typing
+G_img.remove("run_for_part5_dataset.m")
+G_img.remove("octave-workspace")
+G_img
+list(G_img)
+
+!octave --path  "/gdrive/MyDrive/Colab Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/run_for_part5_dataset.m"
+    >pwd
+    >run_for_part5_dataset.m
     
