@@ -21,7 +21,7 @@ import shutil
 #source_folder = r"E:\pynative\reports\\"
 #destination_folder = r"E:\pynative\account\\"
 source_folder = os.getcwd()
-destination_folder = '/content/gdrive/MyDrive/Colab Notebooks/first trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004_extracted/TIR_training_004_videos/'
+destination_folder = '/content/gdrive/MyDrive/Colab_Notebooks/first trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004_extracted/TIR_training_004_videos/'
 
 # fetch all files
 for file_name in os.listdir(source_folder):
@@ -36,19 +36,17 @@ for file_name in os.listdir(source_folder):
         
 # add_paths on octave 
 from os import listdir
-G_img=listdir('/content/gdrive/MyDrive/Colab Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann') 
+G_img=listdir('/content/gdrive/MyDrive/Colab_Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann') 
 count = 0
 while count <len(G_img)-2 :
-      G_img[count] = '/gdrive/MyDrive/Colab Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/' + G_img[count]
+      G_img[count] = '/gdrive/MyDrive/Colab_Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/' + G_img[count]
       count += 1
-    
-#import typing
-G_img.remove("run_for_part5_dataset.m")
-G_img.remove("octave-workspace")
-G_img
-list(G_img)
 
-!octave --path  "/gdrive/MyDrive/Colab Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/run_for_part5_dataset.m"
+G_img =G_img[: len(G_img)-3]
+G_img
+
+
+!octave --path  "/gdrive/MyDrive/Colab_Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/run_for_part5_dataset.m"
     >pwd
     >run_for_part5_dataset.m
     
