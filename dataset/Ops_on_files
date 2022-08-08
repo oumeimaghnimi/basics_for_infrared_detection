@@ -1,0 +1,9 @@
+
+
+#Remove files:
+!pip  install os --upgrade
+import os
+import glob
+
+for filename in glob.glob(f'{os.getcwd()}/*.jpg'):
+    os.remove(filename)
