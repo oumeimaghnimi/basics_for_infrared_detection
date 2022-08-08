@@ -1,4 +1,4 @@
-function [Mat_part5_train4] = Get_mat_function(cwd)
+function annotationmat = Get_mat_function(cwd)
 %first step: add all folders and subfolders and scripts to path by double
 %clic and choose add to path
 
@@ -160,5 +160,5 @@ function [Mat_part5_train4] = Get_mat_function(cwd)
 
 
 
-
+annotationmat = save('Mat_part5_train4')
 end
