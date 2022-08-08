@@ -10,8 +10,8 @@ function annotationmat = Get_mat_function(cwd)
     %folder_ann= H:\video_to_apply_SSL\LSOTB-TIR_TrainingData\Annotations\test_sur_four_lstob\TIR_training_001
          % in workspace (type: string)
          
-         
-    folder_ann = '/content/gdrive/MyDrive/Colab Notebooks/first trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann\'
+    folder_ann = cwd     
+    #folder_ann = '/content/gdrive/MyDrive/Colab Notebooks/first trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann\'
     G_ann = dir(folder_ann);  %dir for folder_ann type string
     G_ann = G_ann([G_ann.isdir]); 
     G_ann = G_ann(~ismember({G_ann.name}, {'.' '..'}));          % out: G_ann.name :string      
