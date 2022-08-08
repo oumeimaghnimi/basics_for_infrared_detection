@@ -46,7 +46,7 @@ G_img =G_img[: len(G_img)-3]
 G_img
 
 
-!octave --path  "/gdrive/MyDrive/Colab_Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/run_for_part5_dataset.m"
-    >pwd
-    >run_for_part5_dataset.m
+!octave --path  "/gdrive/MyDrive/Colab_Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/Get_mat_function.m"
+    >cwd = pwd
+    >annotationmat = Get_mat_function(cwd)
     
