@@ -52,7 +52,7 @@ function annotationmat = Get_mat_function(cwd)
         for i = 1:length(F_ann)
              
             mlStruct = []; 
-            mlStruct =@parseXMLsequencet(fullfile(f_ann, F_ann(i).name));
+            mlStruct =@parseXMLsequencet(str(fullfile(f_ann, F_ann(i).name)));
             mlStruct.Children(1) = [];
             mlStruct.Children(2) = [];
             mlStruct.Children(3) = [];
