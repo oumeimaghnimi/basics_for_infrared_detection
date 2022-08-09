@@ -176,7 +176,7 @@ try
 catch
    error('Unable to parse XML file %s.',filename);
 end
-
+end
 
 % ----- Local function PARSECHILDNODES -----
 function children = parseChildNodes(theNode)
@@ -196,7 +196,7 @@ if theNode.hasChildNodes
         children(count) = makeStructFromNode(theChild);
     end
 end
-
+end
 % ----- Local function MAKESTRUCTFROMNODE -----
 function nodeStruct = makeStructFromNode(theNode)
 % Create structure of node info.
@@ -212,7 +212,7 @@ if any(strcmp(methods(theNode), 'getData'))
 else
    nodeStruct.Data = '';
 end
-
+end
 % ----- Local function PARSEATTRIBUTES -----
 function attributes = parseAttributes(theNode)
 % Create attributes structure.
@@ -231,4 +231,4 @@ if theNode.hasAttributes
       attributes(count).Value = char(attrib.getValue);
    end
 end
-
+end
