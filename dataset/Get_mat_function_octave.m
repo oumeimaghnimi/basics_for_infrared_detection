@@ -114,9 +114,11 @@ end
   
 
 for k = 1:length(G_ann)
-    f_ann = fullfile(folder_ann, G_ann(k).name); %subfolder_ann=f_ann    %f_ann string path to airplane for instance
-    F_ann = dir(sprintf('%s/*.xml', f_ann));
-       
+    %f_ann = fullfile(folder_ann, G_ann(k).name); %subfolder_ann=f_ann    %f_ann string path to airplane for instance
+    f_ann =  G_ann(k).name; %subfolder_ann=f_ann    %f_ann string path to airplane for instance
+    %F_ann = dir(sprintf('%s/*.xml', f_ann));
+    F_ann = dir(sprintf('%s/*.xml', f_ann));  
+    
     event_listsequence = {}; 
     file_listsequence = {};
     lsotb_bbx_list_sequence = {};
