@@ -124,4 +124,4 @@ To use io package,
         pkg list io
         pkg load io
 
-    
+ See 'help pkg' for available actions.    
