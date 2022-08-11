@@ -128,7 +128,12 @@ for k = 1:length(G_ann)
    for i = 1:length(F_ann)
              
        mlStruct = []; 
-       mlStruct = parseXMLsequencet(fullfile(f_ann, F_ann(i).name));
+       %filename = uigetdir(F_ann(i).name ,'Select Input-filename');
+       file = uigetfile;
+       [filename,path] = uigetfile;
+       mlStruct = parseXMLsequencet(path);
+       %mlStruct = parseXMLsequencet(filename);
+       %mlStruct = parseXMLsequencet(fullfile(f_ann, F_ann(i).name));
        mlStruct.Children(1) = [];
        mlStruct.Children(2) = [];
        mlStruct.Children(3) = [];
