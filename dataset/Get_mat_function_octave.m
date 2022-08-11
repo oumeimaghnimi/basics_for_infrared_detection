@@ -11,7 +11,7 @@ function annotationmat = Get_mat_function_octave(cwd)
          % in workspace (type: string)
          
 folder_ann = cwd     
-    #folder_ann = '/content/gdrive/MyDrive/Colab Notebooks/first trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann\'
+    %folder_ann = '/content/gdrive/MyDrive/Colab Notebooks/first trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann\'
 G_ann = dir(folder_ann);  %dir for folder_ann type string
 G_ann = G_ann([G_ann.isdir]); 
 G_ann = G_ann(~ismember({G_ann.name}, {'.' '..'}));          % out: G_ann.name :string      
@@ -202,11 +202,11 @@ for k = 1:length(G_ann)
 
 end
     
-    Mat_part5_train4.event_list{1,1} = event_list_train1_part5;
-    Mat_part5_train4.file_list{1,1} = file_list_train1_part5;
-    Mat_part5_train4.bbx_list{1,1} = lsotb_bbx_list_train1_part5;
-    Mat_part5_train4.occlusion_label_list{1,1}= occlusion_label_list_train1_part5;
-    Mat_part5_train4.track_label_list{1,1} = track_label_list_sequence;
+Mat_part5_train4.event_list{1,1} = event_list_train1_part5;
+Mat_part5_train4.file_list{1,1} = file_list_train1_part5;
+Mat_part5_train4.bbx_list{1,1} = lsotb_bbx_list_train1_part5;
+Mat_part5_train4.occlusion_label_list{1,1}= occlusion_label_list_train1_part5;
+Mat_part5_train4.track_label_list{1,1} = track_label_list_sequence;
     
     
     
@@ -230,6 +230,7 @@ end
 
 
 annotationmat = save('Mat_part5_train4')
+
 end
 
 
