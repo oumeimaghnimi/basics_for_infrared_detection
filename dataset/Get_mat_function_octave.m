@@ -128,7 +128,7 @@ for k = 1:length(G_ann)
    for i = 1:length(F_ann)
              
        mlStruct = []; 
-       mlStruct =parseXMLsequencet(fullfile(f_ann, F_ann(i).name));
+       mlStruct = parseXMLsequencet(fullfile(f_ann, F_ann(i).name));
        mlStruct.Children(1) = [];
        mlStruct.Children(2) = [];
        mlStruct.Children(3) = [];
