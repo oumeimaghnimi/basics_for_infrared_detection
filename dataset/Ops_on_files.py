@@ -50,3 +50,78 @@ G_img
     >cwd = pwd
     >annotationmat = Get_mat_function_octave(cwd)
     
+    
+%https://octave2work.blogspot.com/2017/03/new-package-installation-steps.html:
+if problem as described below occured means
+ubuntu:pkg install -forge io : please install the Debian package "liboctave-dev" to get the mkoctfile command       
+        
+>uname
+ ans =
+
+  scalar structure containing the fields:
+
+    sysname = Linux
+    nodename = 930013201d55
+    release = 5.4.188+
+    version = #1 SMP Sun Apr 24 10:03:06 PDT 2022
+    machine = x86_64   
+    
+    > version  
+      ans = 4.2.2
+    >sudo apt-get install liboctave-dev     
+    
+%pkg load io;
+
+https://lists.gnu.org/archive/html/help-octave/2017-03/msg00169.html:
+http://wiki.octave.org/Cookbook#Load_XML_files   
+https://octave.sourceforge.io/io/function/xmlread.html
+From the page xmlread is a function of io package of octave-forge 
+but is not octave core one.
+
+1. install io package
+From octave prompt
+
+pkg install -forge io
+
+This is required once.
+To confirm io package is installed, execute
+
+pkg list io
+
+2. load io package. 
+From octave prompt
+
+pkg load io
+
+This is required for  every time before you want use the package.
+
+If you want to load io package at octave startup,
+you can use startup file.
+
+https://www.gnu.org/software/octave/doc/interpreter/Startup-Files.html#Startup-Files
+Usually I use 
+~/.octaverc
+
+
+If you are a unix like os user, you know what ~ means.
+~ indicates home directory.
+On windows, home directory is C:\Users\<user name>.
+
+Use an editor and make  .octaverc file in home directory and describe
+
+
+javaaddpath ("/path/to/xerces-2_11_0/xercesImpl.jar");
+javaaddpath ("/path/to/xerces-2_11_0/xml-apis.jar");
+pkg load io;
+
+and save it.    
+    
+
+
+
+To use io package,
+        pkg install -forge io
+        pkg list io
+        pkg load io
+
+    
