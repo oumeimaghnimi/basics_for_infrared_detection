@@ -68,8 +68,10 @@ ubuntu:pkg install -forge io : please install the Debian package "liboctave-dev"
     
     > version  
       ans = 4.2.2
-    >sudo apt-get install liboctave-dev     
-    
+    >sudo apt-get install liboctave-dev  
+     which octave
+    /usr/bin/octave
+    !cp  '/content/gdrive/MyDrive/Colab_Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/image-2.14.0.tar.gz'    /usr/bin/
 %pkg load io;
 
 https://lists.gnu.org/archive/html/help-octave/2017-03/msg00169.html:
