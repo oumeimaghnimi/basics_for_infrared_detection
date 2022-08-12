@@ -46,13 +46,6 @@ G_img =G_img[: len(G_img)-3]
 G_img
 
 
-javaaddpath ("~/Xerces-J-bin.2.12.2-xml-schema-1.1/xercesImpl.jar");
-javaaddpath ("~/Xerces-J-bin.2.12.2-xml-schema-1.1/xml-apis.jar");
-
-!octave --path  "/gdrive/MyDrive/Colab_Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/Get_mat_function.m"
-    >cwd = pwd
-    >annotationmat = Get_mat_function_octave(cwd)
-    cwd = pwd
     
 %https://octave2work.blogspot.com/2017/03/new-package-installation-steps.html:
 if problem as described below occured means
@@ -112,13 +105,7 @@ ans =  4.2.2
 
 
         
-    >sudo apt-get install liboctave-dev  
-       %The following package was automatically installed and is no longer required:
-       %libnvidia-common-460
-       %Use 'apt autoremove' to remove it.
-        %0 upgraded, 0 newly installed, 0 to remove and 19 not upgraded.
-     >which octave
-    /usr/bin/octave
+    
     !cp  '/content/gdrive/MyDrive/Colab_Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/image-2.14.0.tar.gz'    /usr/bin/
 %pkg load io;
 
@@ -188,7 +175,17 @@ To use io package,
         pkg load io
 
  See 'help pkg' for available actions.    
-                                                           octave:1> cwd =pwd
+ 
+>sudo apt-get install liboctave-dev  
+       %The following package was automatically installed and is no longer required:
+       %libnvidia-common-460
+       %Use 'apt autoremove' to remove it.
+        %0 upgraded, 0 newly installed, 0 to remove and 19 not upgraded.
+                                                           
+>which octave
+      /usr/bin/octave                                                           
+                                      
+octave:1> cwd =pwd
 cwd = /content/gdrive/MyDrive/Colab_Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann
 octave:2> pkg install -forge io
 pkg list io
@@ -199,3 +196,13 @@ Package Name  | Version | Installation directory
 --------------+---------+-----------------------
           io  |   2.6.4 | /usr/share/octave/packages/io-2.6.4
 octave:4> pkg load io
+  !octave --path  "/gdrive/MyDrive/Colab_Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/Get_mat_function.m"
+
+                                                           
+javaaddpath ("/Xerces-J-bin.2.12.2-xml-schema-1.1/xercesImpl.jar");
+javaaddpath ("~/Xerces-J-bin.2.12.2-xml-schema-1.1/xml-apis.jar");
+
+
+    >cwd = pwd
+    >annotationmat = Get_mat_function_octave(cwd)
+    cwd = pwd                                                         
