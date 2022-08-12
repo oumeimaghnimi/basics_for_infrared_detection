@@ -49,7 +49,7 @@ G_img
 !octave --path  "/gdrive/MyDrive/Colab_Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/Get_mat_function.m"
     >cwd = pwd
     >annotationmat = Get_mat_function_octave(cwd)
-    
+    cwd = pwd
     
 %https://octave2work.blogspot.com/2017/03/new-package-installation-steps.html:
 if problem as described below occured means
@@ -66,10 +66,55 @@ ubuntu:pkg install -forge io : please install the Debian package "liboctave-dev"
     version = #1 SMP Sun Apr 24 10:03:06 PDT 2022
     machine = x86_64   
     
-    > version  
-      ans = 4.2.2
+    
+    octave: X11 DISPLAY environment variable not set
+octave: disabling GUI features
+GNU Octave, version 4.2.2
+Copyright (C) 2018 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
+
+Octave was configured for "x86_64-pc-linux-gnu".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/get-involved.html
+
+Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+For information about changes from previous versions, type 'news'.
+
+octave:1> pwd
+ans = /content/gdrive/MyDrive/Colab_Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann
+octave:2> uname
+ans =
+
+  scalar structure containing the fields:
+
+    sysname = Linux
+    nodename = 53ab4460e8ff
+    release = 5.4.188+
+    version = #1 SMP Sun Apr 24 10:03:06 PDT 2022
+    machine = x86_64
+  
+octave:3> version
+   
+
+ans =  4.2.2
+
+
+%Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+%For information about changes from previous versions, type 'news'.
+
+
+        
     >sudo apt-get install liboctave-dev  
-     which octave
+       %The following package was automatically installed and is no longer required:
+       %libnvidia-common-460
+       %Use 'apt autoremove' to remove it.
+        %0 upgraded, 0 newly installed, 0 to remove and 19 not upgraded.
+     >which octave
     /usr/bin/octave
     !cp  '/content/gdrive/MyDrive/Colab_Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/image-2.14.0.tar.gz'    /usr/bin/
 %pkg load io;
@@ -86,6 +131,10 @@ From octave prompt
 pkg install -forge io
 
 This is required once.
+
+%OpenJDK 64-Bit Server VM warning: Archived non-system classes are disabled because the java.system.class.loader property is specified (value = "org.octave.OctClassLoader"). To use archived non-system classes, this property must be not be set
+%For information about changes from previous versions of the io package, run 'news io'.
+
 To confirm io package is installed, execute
 
 pkg list io
