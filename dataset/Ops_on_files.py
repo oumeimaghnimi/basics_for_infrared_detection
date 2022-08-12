@@ -121,6 +121,15 @@ ans =  4.2.2
 
 https://lists.gnu.org/archive/html/help-octave/2017-03/msg00169.html:
 http://wiki.octave.org/Cookbook#Load_XML_files   
+      run-octave -f function.m
+      
+     If you have a function that returns several values, e.g.
+        function [a b c]= myfunc ()
+           [a,b,c] = deal (1,2,3); 
+        endfunction
+      and you want to collect them all into a single cell (similarly to Python's zip() function) you can do:
+      outargs = nthargout (1:3, @myfunc)
+        
 https://octave.sourceforge.io/io/function/xmlread.html
 From the page xmlread is a function of io package of octave-forge 
 but is not octave core one.
