@@ -97,7 +97,10 @@ end
 function theStruct = parseXMLsequencet(filename)
 % PARSEXML Convert XML file to a MATLAB structure.
 try
-   tree = xmlread(filename);
+   %tree = xmlread(filename);
+   parser = javaObject("org.apache.xerces.parsers.DOMParser");
+   parser.parse(filename); 
+   tree = parser.getDocument();
 catch
    error('Failed to read XML file %s.',filename);
 end
