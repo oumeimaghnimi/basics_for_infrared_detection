@@ -46,6 +46,9 @@ G_img =G_img[: len(G_img)-3]
 G_img
 
 
+javaaddpath ("~/Xerces-J-bin.2.12.2-xml-schema-1.1/xercesImpl.jar");
+javaaddpath ("~/Xerces-J-bin.2.12.2-xml-schema-1.1/xml-apis.jar");
+
 !octave --path  "/gdrive/MyDrive/Colab_Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann/Get_mat_function.m"
     >cwd = pwd
     >annotationmat = Get_mat_function_octave(cwd)
@@ -185,3 +188,14 @@ To use io package,
         pkg load io
 
  See 'help pkg' for available actions.    
+                                                           octave:1> cwd =pwd
+cwd = /content/gdrive/MyDrive/Colab_Notebooks/first_trial/basics_for_infrared_detection/dataset/LSOTB-TIR_TrainingData_part5/TIR_training_004/TIR_training_004_ann
+octave:2> pkg install -forge io
+pkg list io
+OpenJDK 64-Bit Server VM warning: Archived non-system classes are disabled because the java.system.class.loader property is specified (value = "org.octave.OctClassLoader"). To use archived non-system classes, this property must be not be set
+For information about changes from previous versions of the io package, run 'news io'.
+octave:3> pkg list io
+Package Name  | Version | Installation directory
+--------------+---------+-----------------------
+          io  |   2.6.4 | /usr/share/octave/packages/io-2.6.4
+octave:4> pkg load io
