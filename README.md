@@ -96,7 +96,7 @@ def build(image_set, args):
 checklist for training a model:
 
 
-dataset_train = build_dataset(image_set='train', args=args)
+dataset_train = build_dataset(image_set='train', args=args)\n
 dataset_val = build_dataset(image_set='val', args=args)
 model, criterion, postprocessors = build_model(args)
 optimizer & LR scheduler
