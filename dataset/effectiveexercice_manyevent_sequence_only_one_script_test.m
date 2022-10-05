@@ -29,11 +29,13 @@ for j =1: 4
         %F= rmfield(F,{'date','bytes', 'isdir', 'datenum'});
         %%[filenames, pathname] = uigetfile({sprintf('%s/*.xml', f)}, 'MultiSelect', 'on', 'Please select the images');  
         %   mkdir mycurrentfiles  
-        %attention here,after rename xml file, remove these lines:
-        for h = 1:length(F)
-            movefile(sprintf('%s',f ,'\',F(h).name),sprintf('%s',f ,'\', sprintf('part_5_train_%d_',j),G(k).name,'_', F(h).name) )
-        end
         
+        %%%%%%
+        %attention here,after rename xml file, remove these lines:
+        %for h = 1:length(F)
+            %movefile(sprintf('%s',f ,'\',F(h).name),sprintf('%s',f ,'\', sprintf('part_5_train_%d_',j),G(k).name,'_', F(h).name) )
+        %end
+        %%%%%%%%
         F = dir(sprintf('%s/*.xml', f));
         %  movefile('H:\video to apply SSL\LSOTB-TIR_TrainingData\Annotations\TIR_training_003\Drone_boat_001\00000001test.xml','H:\video to apply SSL\LSOTB-TIR_TrainingData\Annotations\TIR_training_003\Drone_boat_001\00000001.xml'); 
         event_listsequence = {}; 
@@ -124,9 +126,11 @@ for j =1: 4
             newField = 'file_list';
             [mlStruct.Children(2).Children.(newField)] = mlStruct.Children(2).Children.('Data');
             mlStruct.Children(2).Children = rmfield(mlStruct.Children(2).Children,'Data');
+            
             %inside the xml, labeling is not done
             %disp(mlStruct.Children(2).Children);
             disp(sprintf('part_5_train_%d_%s_%s', j, G(k).name, mlStruct.Children(2).Children.file_list));
+            
             event_listsequence{i, 1} = mlStruct.Children(1).Children.event_list; 
                 %event_listsequence{1, 1} = mlStruct.Children(1).Children.event_list;
                 %mlStruct.Children(1).Children  = rmfield(mlStruct.Children(1).Children,'event_list');
