@@ -6,9 +6,9 @@ import string
 import itertools
 import glob
 from glob import glob
-
-
-
+import PIL.Image as Image
+import numpy as np
+import cv2
 
 print(os.getcwd())
 
@@ -26,7 +26,11 @@ categories = [
 #paths
 root_path_img ="LSOTB_TIR_train/images/" +"part_5" 
 root_path_ann = os.path.join("LSOTB_TIR__annotations/", "part_5")
-                             
+
+#path_videos = os.path.join(os.getcwd(), "LSOTB_video_processing")
+#os.mkdir(path_videos)
+
+
 json_file = "train_LSOTB.json"
 
 
@@ -46,8 +50,11 @@ processed = 0
 
 
 for  division in os.listdir(root_path_ann):                             
-    for folder in os.listdir( os.path.join(root_path_ann, division)):                   
+    for folder in os.listdir( os.path.join(root_path_ann, division)):  
+
         print(folder)
+        img_array=[]
+
         for count, filename_ann in enumerate(glob(f'{os.path.join(root_path_ann, division,folder)}/*.xml')):
         #for filename in enumerate(os.path.join(root_path_ann, division,folder, ''*.xml')): 
             print(filename_ann)
@@ -108,7 +115,8 @@ for  division in os.listdir(root_path_ann):
             img_path = glob(os.path.join(root_path_img, division,folder)+ '/*.jpg')[count]
 
             print(img_path)
-           
+
+            
             filename_image = f"{img_path}".split('/')[2]
             
             print(filename_image)
@@ -165,6 +173,25 @@ for  division in os.listdir(root_path_ann):
             image_id += 1
 
             processed += 1
+
+        
+
+        
+        #make a video from frame
+
+            img = Image.open(img_path)
+            #img_w, img_h = img.size
+            (width, height) = img.size
+            size = (width, height)
+            imgcv = cv2.imread(img_path)
+            #img.shape
+
+            img_array.append(imgcv)
+
+        out=cv2.VideoWriter('LSOTB_video_processing/' + f"{root_path_img.split('/')[-1]}_train_{base_path.split('/')[0][-1]}_{folder}"+ '.avi', cv2.VideoWriter_fourcc(*'DIVX'), 15, size )
+        for i in range(len(img_array)):
+            out.write(img_array[i])
+        out.release() 
 
 with open(json_file, "w") as f:
         json_str = json.dumps(res_file)
